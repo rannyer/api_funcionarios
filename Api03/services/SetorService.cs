@@ -10,7 +10,7 @@ public interface ISetorService
     Task<Setor?> ObterPorIdAsync(int id);
     Task<Setor> CriarAsync(Setor setor);
     Task<bool> AtualizarAsync(int id, Setor setor);
-    Task<(bool Removido, string? Erro)> ExcluirAsync(int id);
+    Task<(bool Removido, string? Erro)> RemoverAsync(int id);
 }
 
 public class SetorService : ISetorService
@@ -42,7 +42,7 @@ public class SetorService : ISetorService
         return true;
     }
 
-    public async Task<(bool Removido, string? Erro)> ExcluirAsync(int id)
+    public async Task<(bool Removido, string? Erro)> RemoverAsync(int id)
     {
         var setor = await _repository.ObterPorIdAsync(id);
         if (setor is null) return (false, null);
