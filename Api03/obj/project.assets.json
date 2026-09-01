@@ -376,6 +376,22 @@
           "build/net8.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.30": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.30"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/8.0.30": {
         "type": "package",
         "dependencies": {
@@ -1666,6 +1682,21 @@
         "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.30": {
+      "sha512": "hz732mmVGGuZn7WwW+LnekYw42ai+ZSPiMiBOx/C8fb4kgVieqYg5NL0Vsktgl8aiiBTdIQ+nJRdmIZRxHXDJQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.30",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.8.0.30.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Relational/8.0.30": {
       "sha512": "uGWv6fvDUvJDKAYXfVwPVLmit2i6WCmfdzwrHHuw4OJ30s9GDVLsvV62Gi8TIgFSUlTVgSVW/c+hAvDwmY1TDw==",
       "type": "package",
@@ -2891,6 +2922,7 @@
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.30",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.30",
+      "Microsoft.EntityFrameworkCore.InMemory >= 8.0.30",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.30",
       "Microsoft.EntityFrameworkCore.Sqlite.Core >= 8.0.30",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.30",
@@ -2946,6 +2978,10 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[8.0.30, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[8.0.30, )"
           },

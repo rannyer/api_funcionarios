@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SXR/1Hvm8Wg=",
+  "dgSpecHash": "VyiOjezkNUA=",
   "success": true,
   "projectFilePath": "/Users/rannyer/RiderProjects/Api03/Api03/Api03.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "/Users/rannyer/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.30/microsoft.entityframeworkcore.abstractions.8.0.30.nupkg.sha512",
     "/Users/rannyer/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.30/microsoft.entityframeworkcore.analyzers.8.0.30.nupkg.sha512",
     "/Users/rannyer/.nuget/packages/microsoft.entityframeworkcore.design/8.0.30/microsoft.entityframeworkcore.design.8.0.30.nupkg.sha512",
+    "/Users/rannyer/.nuget/packages/microsoft.entityframeworkcore.inmemory/8.0.30/microsoft.entityframeworkcore.inmemory.8.0.30.nupkg.sha512",
     "/Users/rannyer/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.30/microsoft.entityframeworkcore.relational.8.0.30.nupkg.sha512",
     "/Users/rannyer/.nuget/packages/microsoft.entityframeworkcore.sqlite/8.0.30/microsoft.entityframeworkcore.sqlite.8.0.30.nupkg.sha512",
     "/Users/rannyer/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/8.0.30/microsoft.entityframeworkcore.sqlite.core.8.0.30.nupkg.sha512",
