@@ -1,3 +1,4 @@
+using Api03.dtos;
 using Api03.models;
 using Api03.repositories;
 using Api03.services;
@@ -30,9 +31,9 @@ public class FuncionarioController :ControllerBase
     }
     
     [HttpPost]
-    public async Task<ActionResult<Funcionario>> Criar(Funcionario funcionario)
+    public async Task<ActionResult<Funcionario>> Criar(FuncionarioDto dto)
     {
-        var (criado, erro) = await _service.CriarAsync(funcionario);
+        var (criado, erro) = await _service.CriarAsync(dto);
         if (erro is not null) return BadRequest(new { mensagem = erro });
         return CreatedAtAction(nameof(BuscarPorId), new { id = criado!.Id }, criado);
     }

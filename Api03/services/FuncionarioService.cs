@@ -1,3 +1,4 @@
+using Api03.dtos;
 using Api03.models;
 using Api03.repositories;
 
@@ -7,7 +8,7 @@ public interface IFuncionarioService
 {
      Task<List<Funcionario>> ListarAsync(int? setorId);
      Task<Funcionario> ObterPorIdAsync(int id);
-     Task<(Funcionario? Criado, string? Erro)> CriarAsync(Funcionario funcionario);
+     Task<(Funcionario? Criado, string? Erro)> CriarAsync(FuncionarioDto funcionario);
      Task<(bool Atualizado, string? Erro)> AtualizarAsync(int id, Funcionario funcionario);
      Task<bool> RemoverAsync(int id);
 }
@@ -32,11 +33,18 @@ public class FuncionarioService : IFuncionarioService
           _repository.ObterPorIdAsync(id);
      
 
-     public async Task<(Funcionario? Criado, string? Erro)> CriarAsync(Funcionario funcionario)
+     public async Task<(Funcionario? Criado, string? Erro)> CriarAsync(FuncionarioDto dto)
      {
-          if (!await _setorRepository.ExisteAsync(funcionario.SetorId))
-               return (null, $"Setor {funcionario.SetorId} não encontrado.");
+          if (!await _setorRepository.ExisteAsync(dto.SetorId))
+               return (null, $"Setor {dto.SetorId} não encontrado.");
 
+          var funcionario = new Funcionario
+          {
+               Nome = dto.Nome,
+               Salario = dto.Salario,
+               SetorId = dto.SetorId
+          };
+          
           funcionario.Setor = null;
           funcionario.Enderecos.Clear();
           
