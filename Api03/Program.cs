@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
  
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseInMemoryDatabase("EmpresaDb"));
+    options.UseSqlite(builder.Configuration.GetConnectionString("Default")));
  
 builder.Services.AddScoped<ISetorRepository, SetorRepository>();
 builder.Services.AddScoped<IFuncionarioioRepository, FuncionarioRepository>();
